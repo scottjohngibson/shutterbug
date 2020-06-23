@@ -1,0 +1,171 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	
+}
+
+html {
+
+	overflow: hidden;
+	min-height: 640px;
+	max-height: 853px;
+	background: white;
+}
+
+body {
+}
+
+.wrapper {
+	
+	width: 90%;
+	margin: auto;
+
+}
+
+
+#shutterbug, #shutterbugPortrait {
+
+	display: block;
+	width: 50%;
+	margin: 20px auto;
+	margin-bottom: 25%;
+
+}
+
+#shutterbugPortrait {
+	margin-bottom: 10%;
+
+}
+
+#landscape {
+	display: block;
+	margin-bottom: 4%;
+}
+
+#macro {
+
+	padding-right: 2.5%;
+}
+
+#portrait {
+
+	padding-left: 2.5%;
+}
+
+#portrait:hover {
+
+	opacity: 80%;
+}
+
+
+#flexbox {
+
+	display: flex;
+
+}
+.flex {
+	width: 50%;
+	box-sizing: border-box;
+	
+	
+}
+
+#continue {
+
+	margin: 25% 0;
+
+}
+
+#continuePortait {
+
+	margin: 5% 0;
+}
+
+
+ion-button {
+	--border-color: #6EDCC2;
+	--color: #000
+
+
+}
+
+
+
+
+
+
+
+p {
+	font-size: 3vw;
+}
+
+
+
+
+
+
+
+#viewBox {
+	margin: 0;
+	text-align: center;
+	background: black;
+}
+
+#viewfinder {
+
+	width: 80%;
+}
+
+
+
+#sliderBox {
+	padding: 5%;
+	//border: solid black 1px;
+}
+
+#aperture {
+	//width: 500px;
+	//border: solid black 1px;
+}
+
+
+#sliderBox>p {
+	display: inline;
+	position: relative;
+	top: 15px;
+	left: 25px;
+	
+
+}
+
+#sliderBox>div {
+	display: flex;
+	width: 100%;	
+}
+
+#sliderBox div div {
+	margin: 0;
+	margin-left: 5%;
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: solid lightgrey 2px;
+}
+
+#sliderBox div div p {
+	//border: solid lightgrey 3px;
+	margin: 0;
+	//height: 100%;
+
+
+
+
+
+
+
+
+
+
+

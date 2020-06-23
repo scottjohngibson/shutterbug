@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ShutterBug</title>
+
+
+<meta name="viewport" content="width=device-width", initial-scale=1>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+<link rel="stylesheet" href="../css/style.css"/>
+
+</head>
+<body>
+
+
+<div class="wrapper">
+<img id="shutterbug" src="../img/shutterbug.png">
+
+
+
+<img id="landscape" src="../img/landscape.png">
+
+<div id="flexbox">
+<img class="flex" id="macro" src="../img/macro.png">
+<img class="flex" id="portrait" src="../img/portrait.png" onclick="selectPortrait()">
+</div>
+
+<ion-button shape="round" fill="outline" id="continue" disabled="true" expand="block">Continue</ion-button>
+
+</div>
+
+
+<script src="../js/app.js"></script>
+</body>
+</html>
