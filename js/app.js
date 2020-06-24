@@ -4,7 +4,6 @@ let img = document.getElementById("portrait");
 let nextPage = document.getElementById("continue");
 
 img.src="../img/portraitOn.png";
-nextPage.href="portrait.html"
 nextPage.disabled = "false"
 
 }
@@ -76,3 +75,38 @@ document.getElementById("shutterSpeed").addEventListener("ionChange", simulation
 
 document.getElementById("iso").addEventListener("ionChange", simulation.getISOValue, false);
 document.getElementById("iso").addEventListener("ionChange", simulation.setISOValue, false);
+
+
+
+
+
+function selectFeedback(){
+
+let yes = document.getElementById("yes")
+let nextPage = document.getElementById("continue");
+
+yes.style.background = "#6EDCC2"
+nextPage.disabled = "false"
+
+}
+
+
+
+let feedback = {
+
+
+
+
+
+selectFeedback: function(){
+
+let nextPage = document.getElementById("continue");
+
+nextPage.disabled = "false"
+
+}
+
+
+
+
+}

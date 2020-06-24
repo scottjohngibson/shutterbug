@@ -14,6 +14,7 @@ html {
 }
 
 body {
+
 }
 
 .wrapper {
@@ -23,13 +24,21 @@ body {
 
 }
 
+h1 {
+
+	display: none;
+	color: #6EDCC2;
+	padding-bottom: 20px;
+}
+
 
 #shutterbug, #shutterbugPortrait {
 
 	display: block;
 	width: 50%;
 	margin: 20px auto;
-	margin-bottom: 25%;
+	//margin-bottom: 25%;
+	max-width: 514px;
 
 }
 
@@ -38,42 +47,31 @@ body {
 
 }
 
-#landscape {
-	display: block;
-	margin-bottom: 4%;
-}
-
-#macro {
-
-	padding-right: 2.5%;
-}
-
-#portrait {
-
-	padding-left: 2.5%;
-}
-
-#portrait:hover {
-
-	opacity: 80%;
-}
-
 
 #flexbox {
-
+	//width: 100%;	
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 30px;
+
+
 
 }
+
 .flex {
-	width: 50%;
+	//padding: 5px;
 	box-sizing: border-box;
+	width: 80%;
+
+
 	
 	
 }
 
 #continue {
 
-	margin: 25% 0;
+	//margin: 25% 0;
 
 }
 
@@ -111,14 +109,19 @@ p {
 
 
 
+#flexContainer {
 
+	display: flex;
+	flex-wrap: wrap;
+
+}
 
 
 #viewBox {
 	margin: 0 auto;
 	text-align: center;
 	background: black;
-	max-width: 1700px;
+	max-width: 800px;
 }
 
 #viewfinder {
@@ -132,6 +135,7 @@ p {
 #sliderBox {
 	padding: 5%;
 	//border: solid black 1px;
+	flex-grow: 1;
 }
 
 #aperture {
@@ -151,7 +155,7 @@ p {
 
 #sliderBox>div {
 	display: flex;
-	width: 100%;	
+	//width: 100%;	
 }
 
 #sliderBox div div {
@@ -169,6 +173,72 @@ p {
 	margin: 0;
 	//height: 100%;
 
+}
+
+@media only screen and (min-width: 780px) {
+
+	#shutterbugPortrait {
+
+		margin-bottom: 0%;
+	}
+
+
+	#sliderBox {
+
+		min-width: 800px;
+
+	}
+
+	p {
+		font-size: 1.5vw;
+	}
+
+
+}
+
+
+
+
+
+@media only screen and (min-width: 1600px) {
+
+
+	#shutterbug, 
+	#shutterbugPortrait {
+
+		margin-bottom: 10%;
+	}
+
+	#viewBox {
+
+		margin-left: 30px;
+	}
+
+	#sliderBox {
+
+		min-width: 770px;
+
+	}
+
+	#flexContainer {
+
+		margin-bottom: 40px;
+
+	}
+
+	.flex {
+		align-self: center;
+		width: 33%;
+	}
+
+	h1 {
+
+		display: block;
+	}
+
+
+
+}
 
 
 
@@ -179,3 +249,38 @@ p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#flexContainerFeedback {
+
+	display: flex;
+	
+	//background: black;
+
+}
+
+.flexFeedback {
+	flex-grow: 1;
+	border: solid 2px #6EDCC2;
+	padding: 30px;
+	text-align: center;
+}
