@@ -115,14 +115,16 @@ p {
 
 
 #viewBox {
-	margin: 0;
+	margin: 0 auto;
 	text-align: center;
 	background: black;
+	max-width: 1700px;
 }
 
 #viewfinder {
 
 	width: 80%;
+
 }
 
 

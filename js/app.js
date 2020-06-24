@@ -28,7 +28,7 @@ let simulation = {
 	setApertureValue: function() {
 
 		const sliderValue = simulation.getApertureValue();
-		const apertureArray = ["f/1.8","f/4", "f/8", "f/22"];
+		const apertureArray = ["f/1.4","f/2.8","f/5.6","f/11","f/22"];
 		document.getElementById("apertureView").innerText = apertureArray[sliderValue];
 
 	},
@@ -42,7 +42,7 @@ let simulation = {
 	setShutterValue: function() {
 		//console.log(simulation.getShutterValue())
 		const sliderValue = simulation.getShutterValue();
-		const shutterArray = ["1s", "1/50", "1/500", "1/4000"];
+		const shutterArray = ["1/4", "1/15","1/60", "1/250","1/1000"];
 		document.getElementById("shutterView").innerText = shutterArray[sliderValue];
 
 	},
@@ -56,7 +56,7 @@ let simulation = {
 	setISOValue: function() {
 
 		const sliderValue = simulation.getISOValue();
-		const isoArray = ["100", "400", "1600", "6400"];
+		const isoArray = ["100", "400", "1600", "6400", "25600"];
 		document.getElementById("isoView").innerText = isoArray[sliderValue];
 
 
