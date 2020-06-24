@@ -200,13 +200,13 @@ p {
 
 
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1440px) {
 
 
 	#shutterbug, 
 	#shutterbugPortrait {
 
-		margin-bottom: 10%;
+		margin-bottom: 5%;
 	}
 
 	#viewBox {
@@ -216,7 +216,7 @@ p {
 
 	#sliderBox {
 
-		min-width: 770px;
+		min-width: 610px;
 
 	}
 
