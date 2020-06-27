@@ -40,6 +40,8 @@ let Simulation = {
 		this.exposureValue = this.apertureEV + this.shutterEV + this.isoSliderValue
 		 localStorage.setItem("exposure", this.exposureValue)
 
+		 console.log(this.exposureValue)
+
 	},
 
 

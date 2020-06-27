@@ -14,16 +14,16 @@ let GiveFeedback = {
 	nextPage.disabled = "false"
 	
 
-	localStorage.setItem("happy", bool)
-
 	}
 
 	else {
 	yes.style.background = "white"
     no.style.background = "#6EDCC2"
-    nextPage.disabled = "true" 
-   
+    nextPage.disabled = "false"
+     
 	}
+
+	localStorage.setItem("happy", bool)
 
 	},
 

@@ -98,8 +98,8 @@ ion-range {
 
 
 
-p {
-	font-size: 3vw;
+#sliderBox p {
+	font-size: 4vw;
 }
 
 
@@ -133,12 +133,6 @@ p {
 	//border: solid black 1px;
 	flex-grow: 1;
 }
-
-#aperture {
-	//width: 500px;
-	//border: solid black 1px;
-}
-
 
 #sliderBox>p {
 	display: inline;
@@ -185,7 +179,7 @@ p {
 
 	}
 
-	p {
+	#shutterBox p {
 		font-size: 1.5vw;
 	}
 
@@ -266,10 +260,13 @@ h2 {
 	margin-top: 50%;
 	margin-bottom: 15%;
 	font-size: 1em;
-	text-align: center;
+	//text-align: center;
 }
 
+#feedback {
 
+	margin-top: 20%;
+}
 
 
 #flexContainerFeedback {
@@ -289,3 +286,16 @@ h2 {
 	margin: 3px;
 }
 
+
+#lowDOF img, #highDOF img, #highSpeed img, #lowSpeed img, #highISO img, #highEV img, #lowEV img, #perfectEV img
+
+ {
+
+	border: solid black 2px;
+
+ }
+
+.headline {
+
+	text-align: center;
+}
