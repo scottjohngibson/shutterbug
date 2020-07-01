@@ -141,3 +141,5 @@ document.addEventListener("DOMContentLoaded", function() { GetFeedback.aperture(
 document.addEventListener("DOMContentLoaded", function() { GetFeedback.shutterSpeed()}, false);
 document.addEventListener("DOMContentLoaded", function() { GetFeedback.iso()}, false);
 document.addEventListener("DOMContentLoaded", function() { GetFeedback.exposure()}, false);
+
+module.exports = GetFeedback

@@ -10,27 +10,27 @@ let Simulation = {
 	isoArray: ["100", "400", "1600", "6400", "25600"],
 	exposureValue: 0,
 
-	getValue: function(x) {
+	getValue: function(n) {
 		
-		if (x === 0) {this.apertureSliderValue = document.getElementById("aperture").value;
+		if (n === 0) {this.apertureSliderValue = document.getElementById("aperture").value;
 					  this.apertureEV = this.apertureSliderValue * -1
 					  localStorage.setItem("aperture", this.apertureSliderValue)					  
 					 }
-		else if (x === 1) {this.shutterSliderValue = document.getElementById("shutterSpeed").value;
+		else if (n === 1) {this.shutterSliderValue = document.getElementById("shutterSpeed").value;
 						   this.shutterEV = (this.shutterSliderValue - 2) * -1
 						   localStorage.setItem("shutterSpeed", this.shutterSliderValue)	
 					  	  }
-		else if (x === 2) {this.isoSliderValue = document.getElementById("iso").value;
+		else if (n === 2) {this.isoSliderValue = document.getElementById("iso").value;
 						   localStorage.setItem("iso", this.isoSliderValue)}
 
 	},
 
 
-	displayValue: function(x) {
+	displayValue: function(n) {
 
-		if(x === 0) {document.getElementById("apertureView").innerText = this.apertureArray[this.apertureSliderValue];}
-		else if (x === 1) {document.getElementById("shutterView").innerText = this.shutterArray[this.shutterSliderValue];}
-		else if (x === 2) {document.getElementById("isoView").innerText = this.isoArray[this.isoSliderValue];}
+		if(n === 0) {document.getElementById("apertureView").innerText = this.apertureArray[this.apertureSliderValue];}
+		else if (n === 1) {document.getElementById("shutterView").innerText = this.shutterArray[this.shutterSliderValue];}
+		else if (n === 2) {document.getElementById("isoView").innerText = this.isoArray[this.isoSliderValue];}
 		
 	},
 
@@ -77,13 +77,22 @@ let Simulation = {
 	}
 }
 
+document.addEventListener("DOMContentLoaded", function() {
 Simulation.aperture();
 Simulation.shutterSpeed();
 Simulation.iso();
+})
+
 Simulation.resetValues();
 document.addEventListener("DOMContentLoaded", Simulation.resetValues, false)
 
 
+try {
 module.exports = Simulation
+}
+catch(err) {
+}
+
+
 
 

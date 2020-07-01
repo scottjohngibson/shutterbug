@@ -6,8 +6,6 @@ let GiveFeedback = {
 	let no = document.getElementById("no")
 	let nextPage = document.getElementById("continue");
 
-
-
 	if(bool === true){
 	yes.style.background = "#6EDCC2"
 	no.style.background = "white";
@@ -25,9 +23,11 @@ let GiveFeedback = {
 
 	localStorage.setItem("happy", bool)
 
-	},
+	}
 
 
 }
+
+module.exports = GiveFeedback
 
 
