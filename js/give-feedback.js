@@ -28,6 +28,8 @@ let GiveFeedback = {
 
 }
 
+try {
 module.exports = GiveFeedback
-
-
+}
+catch(err) {
+}

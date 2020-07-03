@@ -13,8 +13,12 @@ let ChooseGenre = {
 
 }
 
-
+try {
 module.exports = ChooseGenre
+}
+catch(err) {
+}
+
 
 
 

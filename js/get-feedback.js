@@ -142,4 +142,9 @@ document.addEventListener("DOMContentLoaded", function() { GetFeedback.shutterSp
 document.addEventListener("DOMContentLoaded", function() { GetFeedback.iso()}, false);
 document.addEventListener("DOMContentLoaded", function() { GetFeedback.exposure()}, false);
 
+
+try {
 module.exports = GetFeedback
+}
+catch(err) {
+}
