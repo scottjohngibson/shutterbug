@@ -2,31 +2,21 @@ html, body {
 	margin: 0;
 	padding: 0;
 	overflow: auto;
-	
 }
 
 html {
-
 	overflow: hidden;
 	min-height: 640px;
 	max-height: 853px;
 	background: white;
 }
 
-body {
-
-}
-
-.wrapper {
-	
+.wrapper {	
 	width: 90%;
 	margin: auto;
-
-
 }
 
 h1 {
-
 	display: none;
 	color: #6EDCC2;
 	padding-bottom: 20px;
@@ -34,29 +24,21 @@ h1 {
 
 
 #shutterbug {
-
 	display: block;
 	width: 50%;
 	margin: 20px auto;
-	//margin-bottom: 25%;
 	max-width: 514px;
-
 }
 
 #landscape {
-
 	padding-top: 0;
 }
 
 #flexbox {
-	//width: 100%;	
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin-bottom: 30px;
-
-
-
 }
 
 .flex {
@@ -64,11 +46,10 @@ h1 {
 	box-sizing: border-box;
 	width: 80%;
 	border-radius: 7.5%;
-	
+
 }
 
-#continue, #continuePortrait {
-
+#continue {
 	width: 80%;
 	margin: auto;
 	position: absolute;
@@ -80,57 +61,38 @@ h1 {
 ion-button {
 	--border-color: #6EDCC2;
 	--color: #000
-
-
 }
 
 ion-range {
-
 	--bar-background: #6EDCC2;
 	--bar-background-active: #6EDCC2;
 	--knob-background: #6EDCC2;
-	
 }
-
-
-
-
-
-
 
 #sliderBox p {
 	font-size: 4vw;
 }
 
-
-
-
 #flexContainer {
-
 	display: flex;
 	flex-wrap: wrap;
-
 }
-
 
 #viewBox {
 	margin: 0 auto;
+	padding: 10px 0;
 	text-align: center;
 	background: black;
-	max-width: 800px;
+	max-width: 750px;
 }
 
 #viewfinder {
-
 	width: 80%;
-
+	
 }
-
-
 
 #sliderBox {
 	padding: 5%;
-	//border: solid black 1px;
 	flex-grow: 1;
 }
 
@@ -139,13 +101,10 @@ ion-range {
 	position: relative;
 	top: 15px;
 	left: 25px;
-	
-
 }
 
 #sliderBox>div {
-	display: flex;
-	//width: 100%;	
+	display: flex;	
 }
 
 #sliderBox div div {
@@ -159,122 +118,17 @@ ion-range {
 }
 
 #sliderBox div div p {
-	//border: solid lightgrey 3px;
 	margin: 0;
-	//height: 100%;
-
 }
 
-@media only screen and (min-width: 780px) {
-
-	#shutterbugPortrait {
-
-		margin-bottom: 0%;
-	}
-
-
-	#sliderBox {
-
-		min-width: 800px;
-
-	}
-
-	#shutterBox p {
-		font-size: 1.5vw;
-	}
-
-
-}
-
-
-
-
-
-@media only screen and (min-width: 1200px) {
-
-
-	#shutterbug, 
-	#shutterbugPortrait {
-
-		margin-bottom: 10%;
-	}
-
-	#viewBox {
-
-		margin-left: 30px;
-	}
-
-	#sliderBox {
-
-		min-width: 370px;
-
-	}
-
-	#flexContainer {
-
-		margin-bottom: 40px;
-
-	}
-
-	.flex {
-		align-self: center;
-		width: 33%;
-	}
-
-	h1 {
-
-		display: block;
-	}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-h2 {
-
-	margin-top: 50%;
-	margin-bottom: 15%;
-	font-size: 1em;
-	//text-align: center;
-}
 
 #feedback {
-
 	margin-top: 20%;
 }
 
 
 #flexContainerFeedback {
-
 	display: flex;
-	
-	//background: black;
-
 }
 
 .flexFeedback {
@@ -286,16 +140,123 @@ h2 {
 	margin: 3px;
 }
 
+#feedbackFlex {
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
 
 #lowDOF img, #highDOF img, #highSpeed img, #lowSpeed img, #highISO img, #highEV img, #lowEV img, #perfectEV img
-
  {
-
 	border: solid black 2px;
-
  }
 
 .headline {
-
 	text-align: center;
 }
+
+h2 {
+	font-size: 5vw;
+	margin-top: 50%;
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+	#shutterbug {
+		margin-bottom: 0;
+	}
+
+	#viewBox {
+		margin-left: 30px;
+	}
+
+	#sliderBox {
+		min-width: 370px;
+
+	}
+
+	#flexContainer {
+		margin-bottom: 40px;
+
+	}
+
+	.flex {
+		align-self: center;
+		width: 33%;
+	}
+
+	h1 {
+		font-size: 2vw;
+		display: block;
+	}
+
+	#flexbox {
+		margin-top: 75px;
+	}
+
+	#sliderBox p {
+		font-size: 2vw;
+	}
+
+	#happy {
+		text-align: center;
+		margin-bottom: 5%;
+		margin-top: 5%;
+		font-size: 2vw;
+	}
+
+	#feedback {
+		margin-bottom: 2%;
+		margin-top: 5%;
+		font-size: 2vw;
+	}
+
+	#lowDOF, #highDOF, #highSpeed, #lowSpeed, #highISO, #highEV, #lowEV, #perfectEV {
+		padding: 20px;
+		width: 25%;
+		flex-grow: 1;
+		text-align: center;
+	}
+	
+	.flexFeedback {
+		font-size: 5vw;
+		padding: 100px;
+		border: solid 5px #6EDCC2;
+		margin: 10px;
+	}
+
+	#continue {
+		height: 100px;
+		font-size: 2vw;
+	}
+
+	#feedback {
+
+		display: none;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

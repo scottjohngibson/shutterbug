@@ -1,0 +1,37 @@
+Scenario: Navigate to an external "Portaiture" resource 
+
+Step: Select "Portraiture" option, and confirm that the "Continue" button can now be interacted with
+      
+Pass/Fail:
+
+Comments:
+
+
+
+Step: Select the "Continue" button, and navigate to the "Exposure-Triangle Simulation" page
+      
+Pass/Fail:
+
+Comments:
+
+
+Step: Select the "Continue" button, and navigate to the "Give Feedback" page
+      
+Pass/Fail:
+
+Comments:
+
+
+
+Step: Select the "Yes" option, and navigate to the "Get Feedback" page
+      
+Pass/Fail:
+
+Comments:
+
+
+Step: Select any of the image links, and confirm that a new tab has opened up and navigated to that link
+      
+Pass/Fail:
+
+Comments:
