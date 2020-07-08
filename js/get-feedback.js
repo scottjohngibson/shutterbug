@@ -117,7 +117,8 @@ let GetFeedback = {
 				document.getElementById("highEV").style.display = "none"
 
 				if(this.happy === "false"){
-				document.getElementById("perfectEV").style.display = "none"
+					this.unhappyValues("perfectEV", " If you feel that your image was actually under/overexposed, remember that the brightness of the scene itself is the final important factor that influences exposure!", "https://www.lightstalking.com/how-light-aperture-time-and-sensitivity-affect-exposure/", "../img/sun.jpg", "How Light, Aperture, Time and Sensitivity Affect Exposure")
+
 				}
 
 			}

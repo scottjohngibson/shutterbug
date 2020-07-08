@@ -7,7 +7,7 @@ test('getValue: aperture', () => {
 	document.getElementById("aperture").value = 0
 	Simulation.getValue(0);
     expect(localStorage.getItem("aperture")).toBe("0");
-    expect(Simulation.apertureEV).toBe(-0);
+    expect(Simulation.apertureEV).toBe(2);
 
 });
 
@@ -112,11 +112,20 @@ test('calculateEV', () => {
 	expect(localStorage.getItem("exposure")).toBe("0")
 })
 
+test('changeImg', () => {
+
+	document.body.innerHTML = '<img id="viewfinder" src="../img/portrait/A3-S3-I1.jpg">'
+	Simulation.apertureSliderValue = 0
+	Simulation.shutterSliderValue = 0
+	Simulation.isoSliderValue = 0
+	Simulation.changeImg();
+	expect(document.getElementById('viewfinder').src).toBe("http://localhost/img/portrait/A1-S1-I1.jpg")
+})
 
 test('resetValues', () => {
 
 	Simulation.resetValues();
-	expect(localStorage.getItem("aperture")).toBe("0")
+	expect(localStorage.getItem("aperture")).toBe("2")
 	expect(localStorage.getItem("shutterSpeed")).toBe("2")
 	expect(localStorage.getItem("iso")).toBe("0")
 	expect(localStorage.getItem("exposure")).toBe("0")

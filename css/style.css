@@ -147,7 +147,6 @@ ion-range {
 }
 
 
-
 #lowDOF img, #highDOF img, #highSpeed img, #lowSpeed img, #highISO img, #highEV img, #lowEV img, #perfectEV img
  {
 	border: solid black 2px;
@@ -238,6 +237,11 @@ h2 {
 		display: none;
 	}
 
+	#perfectEV  {
+
+		max-width: 750px;
+		margin: auto;
+	}
 
 }
 

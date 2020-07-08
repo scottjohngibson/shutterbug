@@ -220,12 +220,12 @@ test('iso: Value more than 2 (User is unhappy', () => {
 
 test('exposure: Negative value (User is happy', () => {
 
-	document.body.innerHTML = '<div id="highEV"><p>Your photograph was <strong>overexposed</strong>.</p><a href="https://bdmpublications.com/understanding-high-key-portraiture/" target="_blank"><img src="../img/high-key.jpg"></a><p class="headline">Understanding High-Key Portraiture</p><br></div><div id="perfectEV"><p>Your photograph was <strong>perfectly exposed</strong>.</p><a href="https://clickitupanotch.com/photography-exposure-tips/" target="_blank"><img src="../img/perfect-exposure.jpg"></a><p class="headline">3 Steps for Perfect Exposure</p><br></div><div id="lowEV"><p>Your photograph was <strong>underexposed</strong>.</p><a href="https://www.format.com/magazine/resources/photography/silhouette-photography" target="_blank"><img src="../img/silhouette.jpg"></a><p class="headline">Silhouette Photography 101</p><br></div>'
+	document.body.innerHTML = '<div id="highEV"><p>Your photograph should be <strong>overexposed</strong>.</p><a href="https://bdmpublications.com/understanding-high-key-portraiture/" target="_blank"><img src="../img/high-key.jpg"></a><p class="headline">Understanding High-Key Portraiture</p><br></div><div id="perfectEV"><p>Your photograph should be <strong>perfectly exposed</strong>.</p><a href="https://clickitupanotch.com/photography-exposure-tips/" target="_blank"><img src="../img/perfect-exposure.jpg"></a><p class="headline">3 Steps for Perfect Exposure</p><br></div><div id="lowEV"><p>Your photograph should be <strong>underexposed</strong>.</p><a href="https://www.format.com/magazine/resources/photography/silhouette-photography" target="_blank"><img src="../img/silhouette.jpg"></a><p class="headline">Silhouette Photography 101</p><br></div>'
 	GetFeedback.exposureValue = -6;
 	GetFeedback.happy = "true";
 	GetFeedback.exposure();
 	const test = document.getElementById("lowEV").children;
-	expect(test[0].innerHTML).toBe("Your photograph was <strong>underexposed</strong>.");
+	expect(test[0].innerHTML).toBe("Your photograph should be <strong>underexposed</strong>.");
 	expect(test[1].href).toBe("https://www.format.com/magazine/resources/photography/silhouette-photography");
 	expect(test[1].firstChild.src).toBe("http://localhost/img/silhouette.jpg");
 	expect(test[2].innerHTML).toBe("Silhouette Photography 101")
@@ -236,12 +236,12 @@ test('exposure: Negative value (User is happy', () => {
 
 test('exposure: Negative value (User is unhappy', () => {
 
-	document.body.innerHTML = '<div id="highEV"><p>Your photograph was <strong>overexposed</strong>.</p><a href="https://bdmpublications.com/understanding-high-key-portraiture/" target="_blank"><img src="../img/high-key.jpg"></a><p class="headline">Understanding High-Key Portraiture</p><br></div><div id="perfectEV"><p>Your photograph was <strong>perfectly exposed</strong>.</p><a href="https://clickitupanotch.com/photography-exposure-tips/" target="_blank"><img src="../img/perfect-exposure.jpg"></a><p class="headline">3 Steps for Perfect Exposure</p><br></div><div id="lowEV"><p>Your photograph was <strong>underexposed</strong>.</p><a href="https://www.format.com/magazine/resources/photography/silhouette-photography" target="_blank"><img src="../img/silhouette.jpg"></a><p class="headline">Silhouette Photography 101</p><br></div>'
+	document.body.innerHTML = '<div id="highEV"><p>Your photograph should be <strong>overexposed</strong>.</p><a href="https://bdmpublications.com/understanding-high-key-portraiture/" target="_blank"><img src="../img/high-key.jpg"></a><p class="headline">Understanding High-Key Portraiture</p><br></div><div id="perfectEV"><p>Your photograph should be <strong>perfectly exposed</strong>.</p><a href="https://clickitupanotch.com/photography-exposure-tips/" target="_blank"><img src="../img/perfect-exposure.jpg"></a><p class="headline">3 Steps for Perfect Exposure</p><br></div><div id="lowEV"><p>Your photograph should be <strong>underexposed</strong>.</p><a href="https://www.format.com/magazine/resources/photography/silhouette-photography" target="_blank"><img src="../img/silhouette.jpg"></a><p class="headline">Silhouette Photography 101</p><br></div>'
 	GetFeedback.exposureValue = -6;
 	GetFeedback.happy = "false";
 	GetFeedback.exposure();
 	const test = document.getElementById("lowEV").children;
-	expect(test[0].innerHTML).toBe("Your photograph was <strong>underexposed</strong>. Underexposing your image can be a great stylistic choice e.g. low-key or silhouette photography, yet it is often just an unintentional result of unbalanced camera settings. Remember the exposure triangle!");
+	expect(test[0].innerHTML).toBe("Your photograph should be <strong>underexposed</strong>. Underexposing your image can be a great stylistic choice e.g. low-key or silhouette photography, yet it is often just an unintentional result of unbalanced camera settings. Remember the exposure triangle!");
 	expect(test[1].href).toBe("https://www.better-digital-photo-tips.com/underexposed-photo.html");
 	expect(test[1].firstChild.src).toBe("http://localhost/img/underexposed.jpg");
 	expect(test[2].innerHTML).toBe("How to Avoid an Underexposed Photo")
@@ -252,7 +252,7 @@ test('exposure: Negative value (User is unhappy', () => {
 
 test('exposure: Perfect value (User is happy', () => {
 
-	document.body.innerHTML = '<div id="highEV"><p>Your photograph was <strong>overexposed</strong>.</p><a href="https://bdmpublications.com/understanding-high-key-portraiture/" target="_blank"><img src="../img/high-key.jpg"></a><p class="headline">Understanding High-Key Portraiture</p><br></div><div id="perfectEV"><p>Your photograph was <strong>perfectly exposed</strong>.</p><a href="https://clickitupanotch.com/photography-exposure-tips/" target="_blank"><img src="../img/perfect-exposure.jpg"></a><p class="headline">3 Steps for Perfect Exposure</p><br></div><div id="lowEV"><p>Your photograph was <strong>underexposed</strong>.</p><a href="https://www.format.com/magazine/resources/photography/silhouette-photography" target="_blank"><img src="../img/silhouette.jpg"></a><p class="headline">Silhouette Photography 101</p><br></div>'
+	document.body.innerHTML = '<div id="highEV"><p>Your photograph should be <strong>overexposed</strong>.</p><a href="https://bdmpublications.com/understanding-high-key-portraiture/" target="_blank"><img src="../img/high-key.jpg"></a><p class="headline">Understanding High-Key Portraiture</p><br></div><div id="perfectEV"><p>Your photograph should be <strong>perfectly exposed</strong>.</p><a href="https://clickitupanotch.com/photography-exposure-tips/" target="_blank"><img src="../img/perfect-exposure.jpg"></a><p class="headline">3 Steps for Perfect Exposure</p><br></div><div id="lowEV"><p>Your photograph should be <strong>underexposed</strong>.</p><a href="https://www.format.com/magazine/resources/photography/silhouette-photography" target="_blank"><img src="../img/silhouette.jpg"></a><p class="headline">Silhouette Photography 101</p><br></div>'
 	GetFeedback.exposureValue = 0;
 	GetFeedback.happy = "true";
 	GetFeedback.exposure();
@@ -264,24 +264,29 @@ test('exposure: Perfect value (User is happy', () => {
 
 test('exposure: Perfect value (User is unhappy', () => {
 
-	document.body.innerHTML = '<div id="highEV"><p>Your photograph was <strong>overexposed</strong>.</p><a href="https://bdmpublications.com/understanding-high-key-portraiture/" target="_blank"><img src="../img/high-key.jpg"></a><p class="headline">Understanding High-Key Portraiture</p><br></div><div id="perfectEV"><p>Your photograph was <strong>perfectly exposed</strong>.</p><a href="https://clickitupanotch.com/photography-exposure-tips/" target="_blank"><img src="../img/perfect-exposure.jpg"></a><p class="headline">3 Steps for Perfect Exposure</p><br></div><div id="lowEV"><p>Your photograph was <strong>underexposed</strong>.</p><a href="https://www.format.com/magazine/resources/photography/silhouette-photography" target="_blank"><img src="../img/silhouette.jpg"></a><p class="headline">Silhouette Photography 101</p><br></div>'
+	document.body.innerHTML = '<div id="highEV"><p>Your photograph should be <strong>overexposed</strong>.</p><a href="https://bdmpublications.com/understanding-high-key-portraiture/" target="_blank"><img src="../img/high-key.jpg"></a><p class="headline">Understanding High-Key Portraiture</p><br></div><div id="perfectEV"><p>Your photograph should be <strong>perfectly exposed</strong>.</p><a href="https://clickitupanotch.com/photography-exposure-tips/" target="_blank"><img src="../img/perfect-exposure.jpg"></a><p class="headline">3 Steps for Perfect Exposure</p><br></div><div id="lowEV"><p>Your photograph should be <strong>underexposed</strong>.</p><a href="https://www.format.com/magazine/resources/photography/silhouette-photography" target="_blank"><img src="../img/silhouette.jpg"></a><p class="headline">Silhouette Photography 101</p><br></div>'
 	GetFeedback.exposureValue = 0;
 	GetFeedback.happy = "false";
 	GetFeedback.exposure();
+	const test = document.getElementById("perfectEV").children;
 	expect(document.getElementById('highEV').style.display).toBe("none")
 	expect(document.getElementById('lowEV').style.display).toBe("none")
-	expect(document.getElementById('perfectEV').style.display).toBe("none")
+	expect(test[0].innerHTML).toBe("Your photograph should be <strong>perfectly exposed</strong>. If you feel that your image was actually under/overexposed, remember that the brightness of the scene itself is the final important factor that influences exposure!");
+	expect(test[1].href).toBe("https://www.lightstalking.com/how-light-aperture-time-and-sensitivity-affect-exposure/");
+	expect(test[1].firstChild.src).toBe("http://localhost/img/sun.jpg");
+	expect(test[2].innerHTML).toBe("How Light, Aperture, Time and Sensitivity Affect Exposure");
+	
 
 })
 
-test('exposure: positive value (User is happy', () => {
+test('exposure: Positive value (User is happy', () => {
 
-	document.body.innerHTML = '<div id="highEV"><p>Your photograph was <strong>overexposed</strong>.</p><a href="https://bdmpublications.com/understanding-high-key-portraiture/" target="_blank"><img src="../img/high-key.jpg"></a><p class="headline">Understanding High-Key Portraiture</p><br></div><div id="perfectEV"><p>Your photograph was <strong>perfectly exposed</strong>.</p><a href="https://clickitupanotch.com/photography-exposure-tips/" target="_blank"><img src="../img/perfect-exposure.jpg"></a><p class="headline">3 Steps for Perfect Exposure</p><br></div><div id="lowEV"><p>Your photograph was <strong>underexposed</strong>.</p><a href="https://www.format.com/magazine/resources/photography/silhouette-photography" target="_blank"><img src="../img/silhouette.jpg"></a><p class="headline">Silhouette Photography 101</p><br></div>'
+	document.body.innerHTML = '<div id="highEV"><p>Your photograph should be <strong>overexposed</strong>.</p><a href="https://bdmpublications.com/understanding-high-key-portraiture/" target="_blank"><img src="../img/high-key.jpg"></a><p class="headline">Understanding High-Key Portraiture</p><br></div><div id="perfectEV"><p>Your photograph should be <strong>perfectly exposed</strong>.</p><a href="https://clickitupanotch.com/photography-exposure-tips/" target="_blank"><img src="../img/perfect-exposure.jpg"></a><p class="headline">3 Steps for Perfect Exposure</p><br></div><div id="lowEV"><p>Your photograph should be <strong>underexposed</strong>.</p><a href="https://www.format.com/magazine/resources/photography/silhouette-photography" target="_blank"><img src="../img/silhouette.jpg"></a><p class="headline">Silhouette Photography 101</p><br></div>'
 	GetFeedback.exposureValue = 6;
 	GetFeedback.happy = "true";
 	GetFeedback.exposure();
 	const test = document.getElementById("highEV").children;
-	expect(test[0].innerHTML).toBe("Your photograph was <strong>overexposed</strong>.");
+	expect(test[0].innerHTML).toBe("Your photograph should be <strong>overexposed</strong>.");
 	expect(test[1].href).toBe("https://bdmpublications.com/understanding-high-key-portraiture/");
 	expect(test[1].firstChild.src).toBe("http://localhost/img/high-key.jpg");
 	expect(test[2].innerHTML).toBe("Understanding High-Key Portraiture")
@@ -291,14 +296,14 @@ test('exposure: positive value (User is happy', () => {
 })
 
 
-test('exposure: positive value (User is unhappy', () => {
+test('exposure: Positive value (User is unhappy', () => {
 
-	document.body.innerHTML = '<div id="highEV"><p>Your photograph was <strong>overexposed</strong>.</p><a href="https://bdmpublications.com/understanding-high-key-portraiture/" target="_blank"><img src="../img/high-key.jpg"></a><p class="headline">Understanding High-Key Portraiture</p><br></div><div id="perfectEV"><p>Your photograph was <strong>perfectly exposed</strong>.</p><a href="https://clickitupanotch.com/photography-exposure-tips/" target="_blank"><img src="../img/perfect-exposure.jpg"></a><p class="headline">3 Steps for Perfect Exposure</p><br></div><div id="lowEV"><p>Your photograph was <strong>underexposed</strong>.</p><a href="https://www.format.com/magazine/resources/photography/silhouette-photography" target="_blank"><img src="../img/silhouette.jpg"></a><p class="headline">Silhouette Photography 101</p><br></div>'
+	document.body.innerHTML = '<div id="highEV"><p>Your photograph should be <strong>overexposed</strong>.</p><a href="https://bdmpublications.com/understanding-high-key-portraiture/" target="_blank"><img src="../img/high-key.jpg"></a><p class="headline">Understanding High-Key Portraiture</p><br></div><div id="perfectEV"><p>Your photograph should be <strong>perfectly exposed</strong>.</p><a href="https://clickitupanotch.com/photography-exposure-tips/" target="_blank"><img src="../img/perfect-exposure.jpg"></a><p class="headline">3 Steps for Perfect Exposure</p><br></div><div id="lowEV"><p>Your photograph should be <strong>underexposed</strong>.</p><a href="https://www.format.com/magazine/resources/photography/silhouette-photography" target="_blank"><img src="../img/silhouette.jpg"></a><p class="headline">Silhouette Photography 101</p><br></div>'
 	GetFeedback.exposureValue = 6;
 	GetFeedback.happy = "false";
 	GetFeedback.exposure();
 	const test = document.getElementById("highEV").children;
-	expect(test[0].innerHTML).toBe("Your photograph was <strong>overexposed</strong>. Whilst overexposing your image can be a stylistic choice e.g. high-key photography, it is often just an unintentional result of unbalanced camera settings. Remember the exposure triangle!");
+	expect(test[0].innerHTML).toBe("Your photograph should be <strong>overexposed</strong>. Whilst overexposing your image can be a stylistic choice e.g. high-key photography, it is often just an unintentional result of unbalanced camera settings. Remember the exposure triangle!");
 	expect(test[1].href).toBe("https://expertphotography.com/fix-overexposed-photo/");
 	expect(test[1].firstChild.src).toBe("http://localhost/img/overexposed.jpg");
 	expect(test[2].innerHTML).toBe("How to Fix an Overexposed Photo")
