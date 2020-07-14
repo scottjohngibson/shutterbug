@@ -1,6 +1,6 @@
 let ChooseGenre = {
 
-
+	/* Changes "Portraiture" image/unlocks continue button */
 	selectPortrait: function(){
 
 	let img = document.getElementById("portrait");

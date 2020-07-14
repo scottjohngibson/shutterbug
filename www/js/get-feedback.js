@@ -7,6 +7,8 @@ let GetFeedback = {
 	isoValue: localStorage.getItem("iso"),
 	exposureValue: localStorage.getItem("exposure"),
 
+
+	/* Sets feedback greeting based on "Give Feedback" page input */
 	feedbackGreeting: function() {
 
 	let greeting = ""
@@ -25,7 +27,14 @@ let GetFeedback = {
 
 	},
 
-
+	/* Overwrite attributes of specified HTML element with new arguments
+	//
+	// @param {string} id - id of HTML element
+	// @param {string} advice - additional information about photography settings
+	// @param {string} url - absolute link to updated resource
+	// @param {string} imgPath - relative path of new resource image
+	// @param {string} headline - headline of new resource  
+	*/
 	unhappyValues: function(id, advice, url, imgPath, headline){
 
 		const div = document.getElementById(id).children;
@@ -36,7 +45,7 @@ let GetFeedback = {
 
 	}, 
 
-
+	/* Changes visibility/content of "aperture" feedback */
 	aperture: function() {
 
 			if(this.apertureValue < 2){
@@ -66,6 +75,7 @@ let GetFeedback = {
 
 	},
 
+	/* Changes visibility/content of "shutterSpeed" feedback */
 	shutterSpeed: function() {
 
 			if(this.shutterValue < 2){
@@ -90,6 +100,7 @@ let GetFeedback = {
 			}
 	}, 
 
+	/* Changes visibility/content of "iso" feedback */
 	iso: function() {
 
 		   if(this.isoValue < 2){
@@ -102,6 +113,7 @@ let GetFeedback = {
 
 	},
 
+	/* Changes visibility/content of "exposure" feedback */
 	exposure: function() {
 
 			if(this.exposureValue > 0){
@@ -133,15 +145,16 @@ let GetFeedback = {
 	}
 
 
-
 }
 
-
-document.addEventListener("DOMContentLoaded", function() { GetFeedback.feedbackGreeting()}, false);
-document.addEventListener("DOMContentLoaded", function() { GetFeedback.aperture()}, false);
-document.addEventListener("DOMContentLoaded", function() { GetFeedback.shutterSpeed()}, false);
-document.addEventListener("DOMContentLoaded", function() { GetFeedback.iso()}, false);
-document.addEventListener("DOMContentLoaded", function() { GetFeedback.exposure()}, false);
+// calls methods when page is fully loaded
+document.addEventListener("DOMContentLoaded", function() { 
+	GetFeedback.feedbackGreeting()
+	GetFeedback.aperture()
+	GetFeedback.shutterSpeed()
+	GetFeedback.iso()
+	GetFeedback.exposure()
+}, false);
 
 
 try {

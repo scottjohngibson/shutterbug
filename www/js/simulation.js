@@ -10,6 +10,10 @@ let Simulation = {
 	isoArray: ["100", "400", "1600", "6400", "25600"],
 	exposureValue: 0,
 
+	/* Assigns exposure value and stores slider value in local storage
+	//
+	// @param {number} n - determines if "aperture", "shutter-speed", or "iso" element is chosen
+	*/
 	getValue: function(n) {
 		
 		if (n === 0) {this.apertureSliderValue = document.getElementById("aperture").value;
@@ -26,6 +30,10 @@ let Simulation = {
 	},
 
 
+	/* Updates display of "view" element
+	//
+	// @param {number} n determines if "aperture", "shutter-speed", or "iso" element is chosen
+	*/
 	displayValue: function(n) {
 
 		if(n === 0) {document.getElementById("apertureView").innerText = this.apertureArray[this.apertureSliderValue];}
@@ -34,7 +42,7 @@ let Simulation = {
 		
 	},
 
-
+	/* Calculates total exposure value */
 	calculateEV: function() {
 
 		this.exposureValue = this.apertureEV + this.shutterEV + this.isoSliderValue
@@ -44,37 +52,44 @@ let Simulation = {
 
 	},
 
-
+	/* Assigns event listeners - "aperture" */
 	aperture: function() {
 
-	document.getElementById("aperture").addEventListener("ionChange", function() { Simulation.getValue(0) }, false);
-	document.getElementById("aperture").addEventListener("ionChange", function() { Simulation.displayValue(0) }, false);
-	document.getElementById("aperture").addEventListener("ionChange", function() { Simulation.calculateEV() }, false);
-	document.getElementById("aperture").addEventListener("ionChange", function() { Simulation.changeImg() }, false);
+	document.getElementById("aperture").addEventListener("ionChange", function() { 
+	Simulation.getValue(0) 
+	Simulation.displayValue(0) 
+	Simulation.calculateEV() 
+	Simulation.changeImg() }, false);
 	},
 
+	/* Assigns event listeners - "shutterSpeed" */
 	shutterSpeed: function() {
 
-	document.getElementById("shutterSpeed").addEventListener("ionChange", function() { Simulation.getValue(1) }, false);
-	document.getElementById("shutterSpeed").addEventListener("ionChange", function() { Simulation.displayValue(1) }, false);
-	document.getElementById("shutterSpeed").addEventListener("ionChange", function() { Simulation.calculateEV()}, false);
-	document.getElementById("shutterSpeed").addEventListener("ionChange", function() { Simulation.changeImg() }, false);
-    },
-
-	iso: function() {
-	
-	document.getElementById("iso").addEventListener("ionChange", function() { Simulation.getValue(2) }, false);
-	document.getElementById("iso").addEventListener("ionChange", function() { Simulation.displayValue(2) }, false);
-	document.getElementById("iso").addEventListener("ionChange", function() { Simulation.calculateEV()}, false);
-	document.getElementById("iso").addEventListener("ionChange", function() { Simulation.changeImg() }, false);
+	document.getElementById("shutterSpeed").addEventListener("ionChange", function() { 
+	Simulation.getValue(1) 
+	Simulation.displayValue(1) 
+	Simulation.calculateEV() 			
+	Simulation.changeImg() }, false);
 	},
 
+	/* Assigns event listeners - "iso" */
+	iso: function() {
+	
+	document.getElementById("iso").addEventListener("ionChange", function() { 
+	Simulation.getValue(2) 
+	Simulation.displayValue(2) 
+	Simulation.calculateEV() 			
+	Simulation.changeImg() }, false);
+	},
+
+	/* Updates "viewfinder" image based on new settings  */
 	changeImg: function() {
 
 	document.getElementById("viewfinder").src = "img/portrait/A" + (this.apertureSliderValue+1) + "-S" + (this.shutterSliderValue+1) + "-I" + (this.isoSliderValue+1) + ".jpg"
 
 	},
 
+	/* Resets simulation settings to default  */
 	resetValues: function() {
 
 	localStorage.setItem("aperture", 2)
@@ -85,14 +100,13 @@ let Simulation = {
 	}
 }
 
+// calls methods when page is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
 Simulation.aperture();
 Simulation.shutterSpeed();
 Simulation.iso();
-})
-
 Simulation.resetValues();
-document.addEventListener("DOMContentLoaded", Simulation.resetValues, false)
+})
 
 
 try {
