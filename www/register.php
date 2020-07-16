@@ -117,19 +117,19 @@ closeConnection($conn);
     <form action="?" method="post">
     
         <ion-item lines="full" mode="ios">
-        <ion-input inputmode="text" name="name" placeholder="Username"></ion-input> <br>
+        <ion-input id="username" inputmode="text" name="name" placeholder="Username"></ion-input> <br>
         </ion-item>
 
         
         <ion-item lines="full" mode="ios">
-        <ion-input type="password" inputmode="text" name="password" placeholder="Password"></ion-input> <br>
+        <ion-input id="password" type="password" inputmode="text" name="password" placeholder="Password"></ion-input> <br>
         </ion-item>
 
         <ion-item lines="full" id="last" mode="ios">
-        <ion-input type="password" inputmode="text" name="confirm-password" placeholder="Confirm Password"></ion-input> <br>
+        <ion-input id="confirm-password" type="password" inputmode="text" name="confirm-password" placeholder="Confirm Password"></ion-input> <br>
         </ion-item>
 
-        <ion-button type="submit" shape="round" fill="outline" id="continue" expand="block">Sign Up</ion-button>
+        <ion-button disabled="true" type="submit" shape="round" fill="outline" id="continue" expand="block">Sign Up</ion-button>
         <span>Already have an account?</span>
         <a href="login.php">Sign In</a>
     </form>
@@ -142,6 +142,8 @@ closeConnection($conn);
     ?>
 
     </div>
+
+    <script src="js/register.js"></script>
 </body>
 </html>
 

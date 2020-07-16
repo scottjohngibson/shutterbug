@@ -114,14 +114,14 @@ closeConnection($conn);
     <form action="?" method="post">
         
         <ion-item lines="full" mode="ios">
-        <ion-input inputmode="text" name="name" placeholder="Username"></ion-input> <br>
+        <ion-input id="username" inputmode="text" name="name" placeholder="Username"></ion-input> <br>
         </ion-item>
 
-        <ion-item lines="full" id="last" mode="ios">
-        <ion-input type="password" inputmode="text" name="password" placeholder="Password"></ion-input> <br>
+        <ion-item id="last" lines="full"  mode="ios">
+        <ion-input id="password" type="password" inputmode="text" name="password" placeholder="Password"></ion-input> <br>
         </ion-item>
 
-        <ion-button type="submit" shape="round" fill="outline" id="continue" expand="block">Sign In</ion-button>
+        <ion-button type="submit" disabled="true" shape="round" fill="outline" id="continue" expand="block">Sign In</ion-button>
         <span>Don't have an account?</span>
         <a href="register.php">Sign Up</a>
     </form>
@@ -130,7 +130,10 @@ closeConnection($conn);
 
     </div>
 
+    
+<script src="js/login.js"></script>
 
 </body>
+
 </html>
 
