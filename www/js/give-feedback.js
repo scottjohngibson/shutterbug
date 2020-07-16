@@ -29,7 +29,6 @@ let GiveFeedback = {
 
 	}
 
-
 }
 
 try {

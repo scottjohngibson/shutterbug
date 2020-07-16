@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,12 +16,56 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
 <link rel="stylesheet" href="css/style.css"/>
 
+<style>
+    #nav {
+    display: flex;
+    
+        
+    }
+
+    #nav div {
+        position: relative;
+        width: 75px;
+        text-align: center;
+    }
+
+    #shutterbug {
+        padding-top: 6px;
+    }
+
+    #user {
+        
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        //transform: translateY(-5px);
+    }
+        
+</style>
+
 </head>
 <body>
 
 
-<div class="wrapper">
+<nav id="nav">
+<div>
+
+<?php 
+
+if(isset($_SESSION["username"])){
+    echo '<a href="logout.html"><img id="user" src="img/user.png" alt=""></a>';
+}
+else { echo '<a href="login.php"><img id="user" src="img/user.png" alt=""></a>';}
+?> 
+
+
+</div>
 <img id="shutterbug" src="img/shutterbug.png">
+</nav>
+
+<div class="wrapper">
 
 <h1>1) Select a style</h1>
 
