@@ -1,3 +1,9 @@
+<?php session_start(); 
+
+if(isset($_SESSION["username"])) header("Location: http://localhost:8080/www/index.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,6 +62,14 @@ padding-bottom: 35px;
 color: #dc6e88;
 }
 
+
+@media only screen and (min-width: 1200px) {
+
+body  {
+    font-size: 1.6em;
+}
+}
+
 </style>
 
 </head>
@@ -84,10 +98,6 @@ else {
     if($_POST["password"] != $_POST["confirm-password"]){
 
         $pwmatch = "Passwords must match";
-    }
-
-    else if($_POST["name"] == "" || $_POST["password"] == "" || $_POST["confirm-password"] == "") {
-        $fieldsfill = "Please ensure all fields are filled";
     }
 
     else {

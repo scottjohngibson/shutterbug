@@ -1,3 +1,9 @@
+<?php session_start(); 
+
+if(isset($_SESSION["username"])) header("Location: http://localhost:8080/www/index.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,6 +46,7 @@ font-weight: bold;
 display: block;
 }
 
+
 a {
 color: #6EDCC2;
 text-decoration: none;
@@ -57,6 +64,13 @@ text-decoration: none;
     color: #dc6e88;
 }
 
+@media only screen and (min-width: 1200px) {
+
+    body  {
+        font-size: 1.6em;
+    }
+}
+
 
 </style>
 
@@ -70,6 +84,8 @@ include 'connection.php';
 $conn = openConnection();
 
 $incorrect = "";
+
+
 
 if(isset($_POST["name"])){
 
@@ -96,6 +112,9 @@ else {
 closeConnection($conn);
 
 }
+
+
+
 ?>
 
 

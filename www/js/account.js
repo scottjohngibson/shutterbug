@@ -20,8 +20,6 @@ if(document.getElementById("username").value == "" || document.getElementById("p
 }, 
 
 
-
-
 }
 
 document.getElementById("username").addEventListener("ionChange", Login.enableContinue);
