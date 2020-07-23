@@ -1,6 +1,20 @@
 
 $(document).ready(function() {
 
+    
+    // redirects user away from register page if they are already logged in
+    $.get("http://192.168.1.16:8080/www/session.php", function(data){
+
+    if(data != ""){
+
+        window.location.href = "index.html";
+
+    }
+
+    })
+
+
+    // provides error handling ()
     $("#continue").click(function(){
 
     let formData = {
@@ -10,18 +24,17 @@ $(document).ready(function() {
         confirmPassword: document.getElementById("confirm-password").value
     };
 
-    $.ajax({
+    $("#error-message").load("http://192.168.1.16:8080/www/register.php", formData, function(data) {
 
-        type: "POST",
-        url: "http://192.168.1.16:8080/www/register.php",
-        data: formData
-    });
-
-    window.location.href = "index.html";
+        if(data == " "){window.location.href = "index.html";}
 
     
 })
 
+})
+
+})
 
 
-    })
+
+
