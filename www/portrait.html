@@ -23,14 +23,16 @@
         
     }
 
-    #nav div {
+    #portrait-img-div {
         position: relative;
-        width: 75px;
+        width: 100px;
         text-align: center;
+        padding-left: 60px;
     }
 
     #shutterbug {
         padding-top: 6px;
+    
     }
 
     #user {
@@ -40,7 +42,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        /*transform: translateY(-5px);*/
+   
     }
 
     a {
@@ -60,7 +62,7 @@
         justify-content: space-between; 
     }
 
-    #nav div {
+    #portrait-img-div {
         display: none;
     }
 
@@ -90,13 +92,13 @@
 <body>
 
 <nav id="nav">
-		<div>
+		<div id="portrait-img-div">
         
         <a id="profile-img" href="login.html"><img id="user" src="img/user.png" alt=""></a>
 		
 		
 		</div>
-		<img id="shutterbug" src="img/shutterbug.png">
+		<div><img id="shutterbug" src="img/shutterbug.png"></div>
 		
 		<a class="profile-text" href="login.html"><p>Profile</p></a>
 		 
@@ -156,10 +158,8 @@
 
 </div>
 
-
-<div class="wrapper" id=continuePortraitWrapper>
 <ion-button href="give-feedback.html" shape="round" fill="outline" id="continue" expand="block">Continue</ion-button>
-</div>
+
 
 <script src="js/simulation.js"></script>
 <script src="js/sessionAjax.js"></script>

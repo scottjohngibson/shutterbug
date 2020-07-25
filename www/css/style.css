@@ -22,15 +22,17 @@ h1 {
 	padding-bottom: 20px;
 }
 
-
 #shutterbug {
 	display: block;
 	width: 50%;
 	margin: 20px auto;
 	max-width: 514px;
+	
+	
 }
 
 #flexbox {
+	margin-top: 40px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -38,20 +40,24 @@ h1 {
 }
 
 .flex {
-	padding: 3px;
+
 	box-sizing: border-box;
 	width: 80%;
-	border-radius: 7.5%;
 
+}
+
+#portrait, #landscape, #macro {
+	border-radius: 7.5%;
+}
+
+#portrait-link {
+	margin: 0;
 }
 
 #continue {
 	width: 80%;
 	margin: auto;
-	position: absolute;
-	bottom: 35px;
-	right: 50%;
-	transform: translateX(50%);
+	margin-bottom: 15px;
 }
 
 ion-button {
@@ -134,14 +140,20 @@ ion-range {
 	text-align: center;
 	border-radius: 7.5%;
 	margin: 3px;
+	text-decoration: none;
 }
 
 #feedbackFlex {
 
 	display: flex;
 	flex-wrap: wrap;
+	
 }
 
+#yes, #no {
+
+	width: 100%;
+}
 
 #lowDOF img, #highDOF img, #highSpeed img, #lowSpeed img, #highISO img, #highEV img, #lowEV img, #perfectEV img
  {
@@ -179,6 +191,7 @@ h2 {
 	.flex {
 		align-self: center;
 		width: 33%;
+		padding: 3px;
 	}
 
 	h1 {

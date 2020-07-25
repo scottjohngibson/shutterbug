@@ -33,5 +33,5 @@ closeConnection($conn);
 
 }
 
-
+header("Access-Control-Allow-Origin: *");
 

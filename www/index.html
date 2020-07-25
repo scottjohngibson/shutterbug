@@ -19,10 +19,12 @@
         
     }
 
-    #nav div {
+    #profile-img-div {
         position: relative;
-        width: 75px;
+        width: 100px;
         text-align: center;
+        padding-left: 60px;
+        
     }
 
     #shutterbug {
@@ -36,7 +38,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        /*transform: translateY(-5px);*/
+  
     }
 
     a {
@@ -56,8 +58,9 @@
         justify-content: space-between; 
     }
 
-    #nav div {
+    #profile-img-div {
         display: none;
+        
     }
 
     #shutterbug {
@@ -86,14 +89,16 @@
 
 
 <nav id="nav">
-<div>
+<div id="profile-img-div">
 
 <a id="profile-img" href="login.html"><img id="user" src="img/user.png" alt=""></a>
 
 
 
 </div>
-<img id="shutterbug" src="img/shutterbug.png">
+
+
+<div><img id="shutterbug" src="img/shutterbug.png"></div>
 
 
 <a id="profile-text" href="login.html"><p>Profile</p></a>
@@ -108,15 +113,14 @@
 
 <div id="flexbox">
 
-<img class=flex id="landscape" src="img/landscape.png">
+<div class=flex><img  id="landscape" src="img/landscape.png"></div>
 
 
-<img class="flex" id="macro" src="img/macro.png">
+<div class=flex><img id="macro" src="img/macro.png"></div>
 
-<img class="flex" id="portrait" src="img/portrait.png" onclick="ChooseGenre.selectPortrait()">
+<a href="portrait.html" id="portrait-link" class="flex"><img id="portrait" src="img/portrait.png"></a>
 </div>
 
-<ion-button href="portrait.html" shape="round" fill="outline" id="continue" disabled="true" expand="block">Continue</ion-button>
 
 </div>
 

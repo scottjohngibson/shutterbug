@@ -22,7 +22,7 @@
 	display: block;
 	width: 50%;
     margin: 20px auto;
-    margin-top: 100px;
+    margin-top: 50px;
 	max-width: 514px;
 }
 
@@ -55,6 +55,16 @@ padding-bottom: 35px;
 .error {
 
 color: #dc6e88;
+}
+
+#continue {
+
+    margin: auto;
+    position: absolute;
+    bottom: 35px;
+    right: 50%;
+    transform: translateX(50%);
+   
 }
 
 
@@ -93,9 +103,10 @@ body  {
         <ion-input id="confirm-password" type="password" inputmode="text" name="confirm-password" placeholder="Confirm Password"></ion-input> <br>
         </ion-item>
 
-        <ion-button disabled="true" shape="round" fill="outline" id="continue" expand="block">Sign Up</ion-button>
         <span>Already have an account?</span>
         <a href="login.html">Sign In</a>
+        <ion-button disabled="true" shape="round" fill="outline" id="continue" expand="block">Sign Up</ion-button>
+
 
 
         <p id="error-message" class="error"></p>
