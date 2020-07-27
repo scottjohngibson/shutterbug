@@ -16,11 +16,10 @@ if(document.getElementById("username").value == "" || document.getElementById("p
 }
 
 
-
-
+document.addEventListener("DOMContentLoaded", function() {
 document.getElementById("username").addEventListener("ionChange", Login.enableContinue);
 document.getElementById("password").addEventListener("ionChange", Login.enableContinue);
-
+})
 
 try {
     module.exports = Login

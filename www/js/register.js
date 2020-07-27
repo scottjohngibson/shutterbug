@@ -16,11 +16,18 @@ if(document.getElementById("username").value == "" || document.getElementById("p
 
 }
 
-
+document.addEventListener("DOMContentLoaded", function() {
 document.getElementById("username").addEventListener("ionChange", Register.enableContinue);
 document.getElementById("password").addEventListener("ionChange", Register.enableContinue);
 document.getElementById("confirm-password").addEventListener("ionChange", Register.enableContinue);
 
 
+})
 
+try {
+    module.exports = Register
+    }
+    catch(err) {
+    }
+    
 

@@ -1,7 +1,5 @@
 <?php 
-
 include 'connection.php';
-
 $conn = openConnection();
 
 if(isset($_POST["name"])){
@@ -14,7 +12,6 @@ if($row != NULL){
 }
 
 else {
-
     if($_POST["password"] != $_POST["confirmPassword"]){
         echo "Passwords must match";
     }
@@ -33,5 +30,5 @@ closeConnection($conn);
 
 }
 
-header("Access-Control-Allow-Origin: *");
+
 
